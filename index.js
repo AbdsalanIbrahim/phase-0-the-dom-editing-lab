@@ -1,21 +1,21 @@
-// Function to change the text content of the heading
-function changeHeadingText() {
-    const heading = document.querySelector('h1');
-    heading.textContent = 'Welcome to My Enhanced HTML Adventure!';
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded and parsed!");
+
+  const title = document.querySelector("h1");
+  title.textContent = "Welcome to My HTML Adventure!";
+
+  const newParagraph = document.createElement("p");
+  newParagraph.textContent = "This is a new paragraph added by JavaScript!";
+  document.body.appendChild(newParagraph); 
   
-  // Function to show an alert when the paragraph is clicked
-  function showAlert() {
-    alert('You clicked on the paragraph!');
-  }
+  const strongText = document.querySelector("strong");
+  strongText.style.color = "blue"; 
+ 
+  const hyperlink = document.querySelector("a");
+  hyperlink.style.color = "green"; 
   
-  // Adding event listeners to the elements
-  document.addEventListener('DOMContentLoaded', () => {
-    // Change the heading text on page load
-    changeHeadingText();
-  
-    // Add click event listener to the paragraph
-    const paragraph = document.querySelector('p');
-    paragraph.addEventListener('click', showAlert);
+  const tableRows = document.querySelectorAll("table tbody tr");
+  tableRows.forEach((row) => {
+    console.log("Row content:", row.innerText);
   });
-  
+});
